@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>INPI</title>
+</head>
+<style>
+        /* @font-face { font-family: 'Pretendard-SemiBold'; src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff'); font-weight: 700; font-style: normal; }  */
+
+
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+    body {
+        font-family: 'Pretendard';
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    #wrap {
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+        display: flex;
+        animation: slide-up 0.9s ease-in-out;
+        overflow-y: hidden;
+    }
+
+    @keyframes slide-up {
+        from {
+            transform: translateY(80%);
+            opacity: 0.3;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* header {
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    header img {
+        width: 1.6vw;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        color: #fff;
+        padding: 1.5vw;
+        z-index: 5;
+    }
+
+    header ul li {
+        font-size: calc(100vw * 22 / 1920);
+        color: #fff;
+        z-index: 1;
+    } */
+
+    header {
+        width: 100%;
+        height: 80px;
+        /* background-color: #091F5B; */
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        transition: all .4s ease-in-out;
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+    }
+
+    header .gnb-main{
+        font-size: calc(100vw * 90 / 1920);
+        font-weight: 700;
+        position: relative;
+        left: 3vw;
+        top: 5vw;
+        color: #fff;
+    }
+
+    header .gnb-main a{
+        color: #fff;
+    }
+
+    header p {
+        font-size: calc(100vw * 20 / 1920);
+        color: #fff;
+        position: absolute;
+        top: 1.3vw;
+        left: 1.5vw;
+    }
+
+    header img {
+        width: 1.7vw;
+        position: relative;
+        /* top: 0.5vw; */
+    }
+
+    nav {
+        display: flex;
+    }
+
+    /* .open-menu {
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        font-size: calc(100vw * 40 / 1920);
+        color: #091F5B;
+        font-weight: 200;
+        z-index: 2;
+    } */
+
+    .open-menu {
+        width: 2vw;
+        height: 2vw;
+        border-radius: 50%;
+        background-color: #7D9CE7;
+        position: fixed;
+        right: 1.5vw;
+        top: 1.5vw;
+        font-size: calc(100vw * 14 / 1920);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .open-menu.active {
+        z-index: 11;
+        color: #F7F2EC;
+    }
+
+    #gnb {
+        position: absolute;
+        top: 0px;
+        /* 변경 */
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #7D9CE7;
+        display: none;
+        z-index: 2;
+    }
+
+    #gnb ul {
+        margin-top: 5%;
+        position: relative;
+        left: 0.5vw;
+        list-style-type: none;
+    }
+
+    #gnb li {
+        padding: 3vh;
+    }
+
+    #gnb li a {
+        font-size: 6vw;
+        padding: 1%;
+        width: 800px;
+        color: #F7F2EC;
+        z-index: 3;
+        font-size: calc(100vw * 50 / 1920);
+        font-weight: 600;
+    }
+
+    #gnb li a:hover {
+        color: #091F5B;
+    }
+
+
+
+    .left-content {
+        /* width: 55vw; */
+        width: 50%;
+        height: 100vh;
+        /* background-image: url(../img/project-meo-bg.png); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: rgb(18, 18, 18);
+        /* border: 1px solid red; */
+    }
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/project-inpi-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        z-index: 3;
+        transition: all 0.6s ease-in-out;
+        background-color: rgb(43, 43, 43);
+    }
+
+
+    /* .left-content img{
+        width: 54vw;
+    } */
+
+    .left-content button {
+        width: 11vw;
+        height: 11vw;
+        border-radius: 50%;
+        border: 0.1vw solid #FFFFFF;
+        background: none;
+        font-weight: 300;
+        transition: all 0.3s ease-in-out;
+        z-index: 5;
+    }
+
+    .left-content button a {
+        color: #FFFFFF;
+        font-size: calc(100vw * 25 / 1920);
+        /* font-weight: 200; */
+    }
+
+    .left-content button:hover {
+        width: 9vw;
+        height: 9vw;
+        /* font-size: calc(100vw * 21 / 1920); */
+        background-color: #ffffff6e;
+    }
+
+    .left-content .project-list {
+        list-style-type: none;
+        position: absolute;
+        left: 2vw;
+        bottom: 2vw;
+        font-size: calc(100vw * 18 / 1920);
+        line-height: 143%;
+        z-index: 5;
+    }
+
+    .left-content .project-list li {
+        color: #fff;
+        font-weight: 500;
+        /* transition: all 0.5s ease-in-out; */
+    }
+
+    .left-content .project-list li span {
+        color: #C1C8DD;
+    }
+
+
+    .right-content {
+        /* width: 45vw; */
+        width: 50%;
+        height: 100vh;
+        background-image: url(../img/project-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .right-content .title-link {
+        font-size: calc(100vw * 86 / 1920);
+        color: #7D9CE7;
+        transition: all 0.5s ease-in-out;
+    }
+
+    /* .right-content .title-link:hover{
+        font-size: calc(100vw * 100 / 1920);
+    } */
+
+    .right-content ul {
+        list-style-type: none;
+    }
+
+
+    .right-content h2 {
+        font-size: calc(100vw * 22 / 1920);
+        font-weight: 500;
+        color: #C1C7D7;
+    }
+
+    .right-content .tag {
+        display: flex;
+    }
+
+    .right-content .tag li {
+        margin: 2vw;
+        color: #7E9DE8;
+    }
+
+    .right-content .project-description li {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2vw;
+    }
+
+    .right-content .project-description .line-txt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.4vw;
+    }
+
+    .right-content .project-description h3 {
+        font-size: calc(100vw * 22 / 1920);
+        color: #7F9EE9;
+    }
+
+    .right-content .project-description .line-1 {
+        border: 0.05vw solid #C6CCDC;
+        width: 15vw;
+        height: 0;
+        margin-left: 0.8vw;
+    }
+
+    .right-content .project-description .line-2 {
+        border: 0.05vw solid #C6CCDC;
+        width: 9.9vw;
+        height: 0;
+        margin-left: 0.8vw;
+    }
+
+    .right-content .project-description .line-3 {
+        border: 0.05vw solid #C6CCDC;
+        width: 16vw;
+        height: 0;
+        margin-left: 0.8vw;
+    }
+
+    .right-content .project-description p {
+        line-height: 134%;
+        font-size: calc(100vw * 17 / 1920);
+        color: #818283;
+        /* border: 1px solid red; */
+        width: 26vw;
+    }
+
+    .right-content .bottom-link {
+        color: #7E9DE8;
+        font-size: calc(100vw * 20 / 1920);
+    }
+
+
+    .half-circle {
+        width: 12vw;
+        height: 5vw;
+        background-color: rgba(0, 0, 0, 0.51);
+        border-bottom-left-radius: 2000px;
+        border-bottom-right-radius: 2000px;
+        position: absolute;
+        z-index: 10;
+        transform: translate(-50%) rotate(180deg);
+        /* left: 50vw; */
+        left: 50%;
+        /* transform: translate(-50%); */
+        bottom: 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scroll-down {
+        bottom: 0;
+        position: absolute;
+        /* left: 50%; */
+        /* transform: translate(-50%, 0%); */
+        z-index: 5;
+        color: white;
+        transform: rotate(180deg);
+    }
+
+    .scroll-down p {
+        display: block;
+        font-size: calc(100vw * 14 / 1920);
+        margin-bottom: 10px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .scroll_down span {
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 30px;
+        border: 2px solid white;
+        border-radius: 50px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .scroll_down span:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 50%;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: white;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        animation: scroll 2s infinite;
+    }
+
+    @-webkit-keyframes scroll {
+        0% {
+            -webkit-transform: translate(-50%, 20px);
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 1;
+        }
+
+        80% {
+            -webkit-transform: translate(-50%, 0);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translate(-50%, 20px);
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 1;
+        }
+
+        80% {
+            transform: translate(-50%, 0);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .half-circle:hover~footer,
+    footer:hover {
+        transform: translateY(0);
+        /* 화면 안으로 이동 */
+    }
+
+
+    footer {
+        width: 100vw;
+        height: 5vw;
+        position: absolute;
+        bottom: 0vw;
+        /* footer의 높이만큼 더 화면 밖으로 이동 */
+        left: 0;
+        background-color: #7E9DE8;
+        z-index: 12;
+        transition: transform 0.5s ease-in-out;
+        /* 애니메이션 추가 */
+        transform: translateY(100%);
+        /* 화면 밖으로 이동 */
+    }
+
+    footer h1 {
+        font-size: calc(100vw * 18 / 1920);
+        margin: 0.3vw;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    footer h1 a{
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h1 a:hover{
+        color: #091F5B;
+        font-weight: 700;
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <!-- <header>
+            <ul>
+                <li>01</li>
+                <li class="logo"><img src="./img/logo.png" alt=""></li>
+            </ul>
+        </header> -->
+
+
+        <header>
+            <p>02</p>
+            <nav>
+                <!-- <div class="open-menu"><img src="./img/logo.png" alt=""></div> -->
+                <div class="open-menu">
+                    menu
+                </div>
+                <div id="gnb">
+                    <a href="index.html" class="gnb-main">Main</a>
+                    <ul>
+                        <!-- <li><a href="index.html">•Main</a></li> -->
+                        <li><a href="meo.html">•Me:O</a></li>
+                        <li><a href="inpi.html">•INPI</a></li>
+                        <li><a href="pea.html">•Princess and Pea</a></li>
+                        <li><a href="toast1.html">•Toast1</a></li>
+                        <li><a href="toast2.html">•Toast2</a></li>
+                        <li><a href="GongGong.html">•GongGong</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="left-content">
+            <!-- <img src="./img/project-meo-bg.png" alt=""> -->
+            <div class="background"></div>
+            <button><a href="https://wjdgusdbstjd.github.io/inpi/#main">VISIT WEB</a></button>
+            <ul class="project-list">
+                <li><span>프로젝트_ </span>2023커뮤니케이션 국제 디자인 공모전 출품작</li>
+                <li><span>프로젝트 인원_ </span>3인(기획1 디자인1 프로그래밍1)</li>
+                <li><span>프로젝트 기간_ </span>2023 03 ~ 2023 06</li>
+            </ul>
+        </div>
+        <div class="right-content">
+            <strong><a href="https://wjdgusdbstjd.github.io/inpi/#main" class="title-link">INPI</a></strong>
+            <h2>소아비만 위험군 아동을 위한 식습관 개선 서비스</h2>
+            <ul class="tag">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Jquery</li>
+            </ul>
+
+            <ul class="project-description">
+                <li>
+                    <div class="line-txt">
+                        <h3>프로젝트에서 나의 역할 </h3>
+                        <div class="line-1"></div>
+                    </div>
+                    <p>
+                        기획 단계에서 자료조사와 리서치를, 디자인 단계에서
+                        앱의 세부적인 디자인을 함께 진행하였습니다.
+                        웹 개발의 단계에서는 디자인되어있는 웹의 구성을 보고
+                        html,css,javascript를 활용해 실제 웹사이트로 구현하였습니다.
+                    </p>
+                </li>
+                <li>
+                    <div class="line-txt">
+                        <h3>프로젝트 진행 과정 중 어려움과 해결</h3>
+                        <div class="line-2"></div>
+                    </div>
+                    <p>
+                        앱을 설명하는 페이지에서의 스크롤방식을 어떻게 구현해야하는지 알아내는 과정에서 어려움을 겪었습니다. 처음엔 구글과 Chat GTP등의 경로를 통해 웹페이지의 스크롤 방식에
+                        대해 먼저 알아보고, 구현하고자하는 스크롤방식을 활용한 웹사이트들을 찾아 개발자도구에서 어떤 코드들을 사용했고, 어떤 플러그인을 활용했는지 꼼꼼히 분석하여 원하는 스크롤
+                        방식을 구현해냈습니다.
+                    </p>
+                </li>
+                <li>
+                    <div class="line-txt">
+                        <h3>프로젝트를 통한 발전</h3>
+                        <div class="line-3"></div>
+                    </div>
+                    <p>
+                        플러그인에 대한 개념을 공부했습니다.
+                        플러그인 내 코드를 어떻게 수정해야하는지,
+                        동일한 플러그인을 두개 이상 사용하고자하려면 어떻게 해야하는지에 대해 배웠고, 웹페이지를 만들면서 반응형에 대해 아쉬움이 많아 따로 공부해보면서 반응형 단위와 사용성에 대해
+                        고민해보는 계기가 되었습니다.
+
+                    </p>
+                </li>
+            </ul>
+            <a href="https://wjdgusdbstjd.github.io/inpi/#main" class="bottom-link">VISIT WEB →</a>
+        </div>
+
+        <div class="half-circle">
+            <div class="scroll-down">
+                <p>HOVER</p>
+                <div class="scroll_down">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h1><a href="https://github.com/wjdgusdbstjd?tab=repositories">Github_
+                    https://github.com/wjdgusdbstjd?tab=repositories</a></h1>
+            <h1>Phone_ 010 9465 9178</h1>
+            <h1>Email_ lucy1216@naver.com</h1>
+        </footer>
+    </div>
+
+
+
+    <script>
+        $(function () {
+            $('.open-menu').click(function () {
+                $(this).toggleClass('active');
+                $('.main-logo-0').toggleClass('active2');
+
+                if ($('#gnb').is(':hidden')) {
+                    $('#gnb').slideDown();
+                } else {
+                    $('#gnb').slideUp();
+                }
+            })
+        });
+
+
+        function pageLoadAnimation() {
+            document.getElementById("content").style.animation = "slide-up 0.5s ease-in-out";
+        }
+
+
+
+        $(document).ready(function () {
+            $(".left-content button").hover(
+                function () {
+                    $('.background').css('opacity', '1');
+                },
+                function () {
+                    $('.background').css('opacity', '0.5');
+                }
+            );
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <!-- GSAP (그린속 애니메이션 플랫폼) 포함 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="scroll-line"></div>
+        <!--스크롤 위치 확인을 위한 컨트롤러 - 나중에 지우기!-->
+        <div class="scroll-indicator" id="scroll-indicator">
+            <!-- <div class="indicator-text">Scroll Position:</div>
+            <div class="indicator-value" id="scroll-value">0%</div> -->
+            <a href="/path/to/your/file.pdf" download>Download resume</a>
+        </div>
+        <!--스크롤 위치 확인을 위한 컨트롤러 - 나중에 지우기!-->
+        <header>
+            <a href="#main"><img src="./img/logo.png" alt=""></a>
+            <nav>
+                <div class="open-menu"></div>
+                <div id="gnb">
+                    <ul class="menu-list">
+                        <li><a class="menu-icon" href="#main">Main<div class="menu-circle"></div></a></li>
+                        <li><a href="#profile">Profile<div class="menu-circle"></div></a></li>
+                        <li><a href="#skill">My Skill<div class="menu-circle"></div></a></li>
+                        <li><a href="#story">My Story<div class="menu-circle"></div></a></li>
+                        <li><a href="#keyword">Keyword<div class="menu-circle"></div></a></li>
+                        <li><a href="#project">Projects<div class="menu-circle"></div></a></li>
+                        <li><a href="#contact">Contact<div class="menu-circle"></div></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <section id="main">
+            <a name="main"></a>
+            <!-- <div class="main-left">
+                <h1 id="main-fade-in">
+                    <span>PORT</span><br>
+                    <span>FOLIO</span>
+                </h1>
+            </div> -->
+
+            <!-- <div class="slideshow">
+                <img src="./img/img-slide-meo.png" class="active">
+                <img src="./img/img-slide-inpi.png" alt="">
+                <img src="./img/img-slide-book.png">
+                <img src="./img/img-slide-pea.png">
+                <img src="./img/img-slide-toast-1.png" alt="">
+                <img src="./img/img-slide-toast-2.png" alt="">
+            </div> -->
+
+            <div id="main-app-text">
+                <h1>Kim jung hyun <br>
+                <span>PORTFOLIO</span></h1>
+            </div>
+
+            <div class="main-right">
+                <ul class="main-sub-txt">
+                    <strong>Kim jung hyun</strong>
+                    <li><a href="https://github.com/wjdgusdbstjd">Github.https://github.com/wjdgusdbstjd</a></li>
+                    <li>Phone. 010 9465 9178</li>
+                    <li>Email. lucy1216@naver.com</li>
+                    <li>instargram. ___jh_99</li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <div class="box front">Me:O</div>
+            <div class="box back">INPI</div>
+            <div class="box top">The Princess and Pea</div>
+            <div class="box bottom">Toast1</div>
+            <div class="box left">Toast!</div>
+            <div class="box right">GongGong</div>
+            </div>
+
+            <div class="clear"></div>
+        </section>
+
+        <section id="overview">
+            <div class="top-text">
+                <div class="line"></div>
+                <h1><span>녹여내는</span> 퍼블리셔 김정현입니다</h1>
+            </div>
+            <p>
+                한가지를 배우면 그 한가지를 스스로에게 녹여내어 <br>
+                저만의 것으로 만들어내고 습득하는 속도가 빠릅니다 <br>
+                이를 무엇이든 녹여내어 하나로 흡수하는 <span>“물"</span>
+                에 비유하여 저를 설명합니다
+                <!-- <div class="click-circle">click</div> -->
+            </p>
+            <strong>Click</strong>
+
+        </section>
+
+        <section id="profile">
+            <a name="profile"></a>
+            <!-- <strong class="profile-str">Profile</strong> -->
+            <div class="profile-content">
+                <dl>
+                    <dt>김정현<span>kim jung hyun</span></dt>
+                    <dd>16 December 1999</dd>
+                </dl>
+                <div class="overview">
+                    <ul class="overview-year">
+                        <li class="year-4">
+                            <strong>2024</strong>
+                            <p>계원예술대학교</p>
+                            <p>디지털미디어디자인</p>
+                            <p>졸업 예정</p>
+                        </li>
+                        <li class="year-3">
+                            <strong>2023</strong>
+                            <p>세부전공</p>
+                            <p>프로그래밍 선택</p>
+                            <br>
+                            <p>졸업작품 스튜디오 <br>
+                                학과 우수작 수상</p>
+                        </li>
+                        <li class="year-2">
+                            <strong>2022</strong>
+                            <p>계원예술대학교</p>
+                            <p>디지털미디어디자인</p>
+                            <p>신입생 우수장학생 입학</p> <br>
+                            <br>
+                            <p>1학년 2학기 성적우수</p>
+                        </li>
+                        <li class="year-1">
+                            <strong>2019</strong>
+                            <p>안양예술고등학교</p>
+                            <p>미술과 서양화 전공 졸업</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="skill">
+            <a name="skill"></a>
+            <div class="skill-card">
+                <ul>
+                    <li class="about-card-1">
+                        <strong class="origin-1">HTML5</strong>
+                        <p class="hide-1">
+                            html5를 활용하여 웹페이지의 기본 구조를 개발할 수 있으며
+                            웹 표준을 준수하여 <br>웹 페이지의 성능, 보안, 그리고 접근성을 향상
+                            시킬 수 있습니다.
+                        </p>
+                    </li>
+                    <li class="about-card-2">
+                        <strong class="origin-2">CSS3</strong>
+                        <p class="hide-2">
+                            CSS3를 활용하여 웹페이지에 동적인 애니메이션과 사용자와 웹 사이의 <br>상호 작용을 추가하여 다양한 경험을 제공할 수 있습니다.
+                            또한 크로스 브라우징을 <br>통해 다양한 웹 브라우저에서 일관된 디자인과 레이아웃을 구현할 수 있습니다.
+                        </p>
+                    </li>
+                    <li class="about-card-3">
+                        <strong class="origin-3">Java <span>Script</span></strong>
+                        <p class="hide-3 ">
+                            Javascript를 사용하여 css를 통해 구현하기 어려운 동적인 인터렉션을 <br>구현할 수 있으며, 변수 선언에 관하여var,let, const의 차이를
+                            이해하고 사용할 수 있으며, <br>Javascript의 다양한 라이브러리를 활용하여 사용자 경험을 높여주는 다양한 동작을 구현할 수 있습니다.
+
+                        </p>
+                    </li>
+                    <!-- <li class="about-card-4">
+                        <strong class="origin-4">ChatGPT</strong>
+                        <p class="hide-4 ">
+                            Javascript를 사용하여 css를 통해 구현하기 어려운 동적인 인터렉션을 <br>구현할 수 있으며, 변수 선언에 관하여var,let, const의 차이를 
+                            이해하고 사용할 수 있으며, <br>Javascript의 다양한 라이브러리를 활용하여 사용자 경험을 높여주는 다양한 동작을 구현할 수 있습니다.
+
+                        </p>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- <h1>Skill</h1> -->
+        </section>
+
+        <section id="story">
+            <a name="story"></a>
+            <!-- <strong>Story</strong> -->
+            <div class="story-left">
+                <h2>1999</h2>
+                <h3>December</h3>
+                <img class="dot-line" src="./img/dot-line.png" alt="">
+                <!-- <div class="story-year">2023</div> -->
+            </div>
+            <!-- <div class="story-right">
+                <p class="story-p">초등학교 6학년부터 회화를 시작한 저는 당연히 작가가 될 것이라는 꿈을 가지고 예고를 진학하게 됩니다. <br>
+                    하지만 획일화된 그림과 재능에 한계를 느끼고 앞으로의 진로에 대해 다시 생각해보게 됩니다.<br>
+                    평소 앱을 사용하면서 아 이게 고쳐지면 좋을텐데, 이 앱은 왜이렇게 불편하지?같은 의문을 자주 느낀 저는 이것이 UIUX라는 분야라는 것을 알게되었고
+                    계원예술대학교 디지털미디어디자인학과를 알게 됩니다.<br>
+                    <br>
+                    <br>
+                    당시 재학생에게 면접과외를 받으면서 생전 처음 접하는 입시제도인 면접 100%에 불안감이 컸지만 면접전형에서 신입생 우수로 입학하는 좋은 성과를 이루게 됩니다.<br>
+                    하지만 학과에 들어오고 나서 인생의 절반을 도화지에 그림만 그렸던 저에게 컴퓨터와 다양한 툴을 활용해 과제를 수행하는 것은 매우 큰 어려움이였습니다.<br>
+                    1학년 1학기 전공 성적은 그럭저럭받았지만 만족스러움과는 한참 뒤떨어진 점수였고, 방학동안 다양한 레퍼런스들과 툴을 만져보면서 1학년 2학기에는 꽤나 만족스러운 성적을 받을
+                    수
+                    있었습니다.<br>
+                    1학년 2학기때 접한 프로그래밍은 저에게 새로운 재미로 다가왔습니다. 매우 직관적이고 배운만큼 보이는 코드의 매력에 빠져 세부전공을 프로그래밍으로 선택하게 되었고, 이
+                    선택을 통해 좋은 사람들을
+                    만나고, 다양한 배움을 얻을 수 있었습니다.<br>
+                    <br>
+                    <br>
+                    이제는 전공심화 과정을 통해서 원래 제가 이 학과에 들어온 목적이였던 UIUX에 대해 배우고자 합니다. 프로젝트 스튜디오와 졸업 전시 준비를 통해 기획과 디자인의 작업
+                    프로세스에 대해서도
+                    알게되었고 현재 저의 개발 지식과 이 두가지를 접목시키면
+                    저 스스로에게 큰 시너지를 일으킬 것이라고 생각합니다. 전공심화 과정을 거친 후에는 대학원에 진학해 UIUX에 대해 더 깊이 연구하고 논문을 투고하고 싶다는 꿈이 있습니다.
+                </p>
+            </div> -->
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 1440 320" class="svg-1">
+                <path fill="#011548" fill-opacity="1"
+                    d="M0,288L34.3,266.7C68.6,245,137,203,206,170.7C274.3,139,343,117,411,106.7C480,96,549,96,617,122.7C685.7,149,754,203,823,213.3C891.4,224,960,192,2029,160C1097.1,128,1166,96,1234,106.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                    <animate attributeName="d" dur="2s" repeatCount="indefinite"
+                        values="M0,288L34.3,266.7C68.6,245,137,203,206,170.7C274.3,139,343,117,411,106.7C480,96,549,96,617,122.7C685.7,149,754,203,823,213.3C891.4,224,960,192,1029,160C1097.1,128,1166,96,1234,106.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z;M0,288L34.3,266.7C68.6,245,137,223,206,190.7C274.3,160,343,128,411,106.7C480,96,549,96,617,106.7C685.7,128,754,160,823,160C891.4,160,960,128,1029,122.7C1097.1,117,1166,139,1234,160C1302.9,182,1371,202,1406,213.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z;M0,288L34.3,266.7C68.6,245,137,203,206,170.7C274.3,139,343,117,411,106.7C480,96,549,96,617,122.7C685.7,149,754,203,823,213.3C891.4,224,960,192,1029,160C1097.1,128,1166,96,1234,106.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" />
+
+                </path>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="400 0 1040 300" class="svg-2">
+                <path fill="#5D88F2" fill-opacity="1"
+                    d="M0,288L34.3,266.7C68.6,245,137,203,206,170.7C274.3,139,343,117,411,106.7C480,96,549,96,617,122.7C685.7,149,754,203,823,213.3C891.4,224,90,12,1029,160C1097.1,128,1166,96,1234,106.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                    <animate attributeName="d" dur="4s" repeatCount="indefinite"
+                        values="M0,288L34.3,266.7C68.6,245,137,203,206,170.7C274.3,139,343,117,411,106.7C480,96,549,96,617,122.7C685.7,149,754,203,823,213.3C891.4,224,960,192,1029,160C1097.1,128,1166,96,1234,106.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z;M0,288L34.3,266.7C68.6,245,137,223,206,190.7C274.3,160,343,128,411,106.7C480,96,549,96,617,106.7C685.7,128,754,160,823,160C891.4,160,960,128,1029,122.7C1097.1,117,1166,139,1234,160C1302.9,182,1371,202,1406,213.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z;M0,288L34.3,266.7C68.6,245,137,203,206,170.7C274.3,139,343,117,411,106.7C480,96,549,96,617,122.7C685.7,149,754,203,823,213.3C891.4,224,960,192,1029,160C1097.1,128,1166,96,1234,106.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" />
+
+                </path>
+            </svg>
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" class="svg-3">
+                <path fill="#FFFFFF" fill-opacity="1"
+                    d="M0,288L34.3,266.7C68.6,245,137,203,206,170.7C274.3,139,43,117,411,106.7C480,96,549,96,617,122.7C685.7,149,754,203,823,213.3C891.4,224,960,192,1029,160C1097.1,128,1166,96,1234,106.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                    <animate attributeName="d" dur="5s" repeatCount="indefinite"
+                        values="M0,288L34.3,266.7C68.6,245,137,203,206,170.7C274.3,139,343,117,411,106.7C480,96,549,96,617,122.7C685.7,149,754,203,823,213.3C891.4,224,960,192,1029,160C1097.1,128,1166,96,1234,106.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z;M0,288L34.3,266.7C68.6,245,137,223,206,190.7C274.3,160,343,128,411,106.7C480,96,549,96,617,106.7C685.7,128,754,160,823,160C891.4,160,960,128,1029,122.7C1097.1,117,1166,139,1234,160C1302.9,182,1371,202,1406,213.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z;M0,288L34.3,266.7C68.6,245,137,203,206,170.7C274.3,139,343,117,411,106.7C480,96,549,96,617,122.7C685.7,149,754,203,823,213.3C891.4,224,960,192,1029,160C1097.1,128,1166,96,1234,106.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" />
+
+                </path>
+            </svg>
+            
+            
+        </section>
+
+        <section id="keyword">
+            <a name="keyword"></a>
+            <!-- <strong>My</strong>
+            <h1>Keyword</h1> -->
+            <ul class="keword-ul">
+                <li>
+                    <div class="keyword-1">
+                        <h2>Soft</h2>
+                    </div>
+                    <span class="keyword-line-1"></span>
+                    <p class="keyword-1-p">동적이고 부드러운 인터렉션을 구현하여 다양한 스크롤 이벤트를
+                        보여주며, 동시에 사용자 경험을 높일 수 있습니다. 이를 통해 전체적인 웹페이지의 분위기를 고려한 인터렉션 웹페이지를 구현할 수 있습니다.</p>
+                </li>
+                <!-- <p class="keyword-1-p">동적이고 부드러운 인터렉션을 구현하여 스크롤시 다양한 이벤트를 보여주고 동시에 사용자 경험을 높이는 웹페이지를 구현할 수 있습니다.</p> -->
+                
+                <li>
+                    <div class="keyword-2">
+                        <h2>Clear</h2>
+                    </div>
+                    <span class="keyword-line-2"></span>
+                    <p class="keyword-2-p">
+                        먕확한 사용자 경험을 위해 어떤 레이아웃과 코드를 사용할 지 고민하고, 이를 통해 
+                        직관적인 인터렉션 웹페이지를 구현할 수 있습니다. 이를 통해 사용자가 웹페이지와
+                        직접적으로 상호 작용하도록 하고자 노력합니다.
+                    </p>
+                </li>
+
+                <li>
+                    <div class="keyword-3">
+                        <h2>Fast</h2>
+                    </div>
+                    <span class="keyword-line-3"></span>
+                    <p class="keyword-3-p">
+                        하나의 웹페이지를 어떤 레이아웃과 방식으로 구현할지에 대한 기획력이 빠르고 이렇게
+                        빠른 판단력을 통해 어떤 인터렉션을 어떤 코드로 구현할지에 대한 회전이 빠르고 이를 통해 구현 속도가 빠릅니다. 
+                    </p>
+                </li>
+            </ul>
+            
+        </section>
+
+        <section id="project">
+            <a name="project"></a>
+            <!-- <strong>Projects/Works</strong> -->
+            <div class="project-top">
+                <a href="meo.html">
+                    <div class="meo">
+                        <h1>Me:O</h1>
+                        <h2>소아비만 위험군 아동을 위한 식습관 개선 서비스</h2>
+                        <!-- <h3>#2학년 2학기 졸업작품 스튜디오 결과물</h3> -->
+                        <!-- <h4>#졸업작품 학과 우수작</h4> -->
+                    </div>
+                </a>
+
+            </div>
+            <div class="project-bottom">
+                <a href="inpi.html">
+                    <div class="inpi">
+                        <h1>INPI</h1>
+                        <h2>후천적 장애인을 위한 정신적인 케어 서비스</h2>
+                        <!-- <h3>#2학년 1학기 프로젝트 스튜디오 결과물</h3> -->
+                    </div>
+                </a>
+
+                <div class="project-bottom-right">
+                    <ul>
+                        <a href="book.html">
+                            <li class="book">
+                                <h1>Independent Book store</h1>
+                                <h2>독립서점에 대해 설명하는 웹사이트</h2>
+                                <!-- <h3>#2학년 1학기 고급웹퍼블리싱 결과물</h3> -->
+                            </li>
+                        </a>
+
+                        <a href="pea.html">
+                            <li class="pea">
+                                <h1>Princess Pea</h1>
+                                <h2>동화 “완두콩 공주"를 보여주는 인터렉션 웹사이트</h2>
+                                <!-- <h3>#2학년 1학기 자바스크립트 프로그래밍 결과물</h3> -->
+                            </li>
+                        </a>
+                    </ul>
+
+                    <ul>
+                        <a href="toast1.html">
+                            <li class="toast-1">
+                                <h1>Tasty Toast1</h1>
+                                <h2>토스트를 주제로 한 CSS 웹사이트</h2>
+                                <!-- <h3>#2학년 1학기 고급웹퍼블리싱 결과물</h3> -->
+                            </li>
+                        </a>
+                        <a href="toast2.html">
+                            <li class="toast-2">
+                                <h1>Tasty Toast2</h1>
+                                <h2>토스트를 주제로 한 인터렉션 웹사이트</h2>
+                                <!-- <h3>#2학년 2학기 웹 인터렉션 프로그래밍 결과물</h3> -->
+                            </li>
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <a name="contact"></a>
+            <div class="contact-circle-1">
+                <h1>Phone</h1>
+                <p>010 9465 9178</p>
+            </div>
+            <div class="contact-circle-2">
+                <h1>Email</h1>
+                <p>lucy1216@naver.com</p>
+            </div>
+            <div class="contact-circle-3">
+                <h1>Github</h1>
+                <a href="https://github.com/wjdgusdbstjd?tab=repositories">https://github.com/wjdgusdbstjd?tab=repositories</a>
+            </div>
+        </section>
+
+        <footer>
+            <ul>
+                <li class="footer-title">kim jung hyun PORTFOLIO website</li>
+                <li>© 2023 Kim jung hyun. All rights reserved.</li>
+                <li><a href="https://github.com/wjdgusdbstjd?tab=repositories">Github_ https://github.com/wjdgusdbstjd?tab=repositories</a></li>
+                <li>Email_ lucy1216@naver.com</li>
+            </ul>
+        </footer>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/scroll.js"></script>
+</body>
+
+</html>
